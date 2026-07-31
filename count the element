@@ -1,0 +1,18 @@
+import java.util.*;
+public class hashmap{
+    public static void main(String[]args){
+         HashMap<Integer,String>map=new HashMap<>();
+
+int arr[] = {1, 2, 2, 3, 3, 3};
+int count=0;
+for(int num:arr){
+  map.put(num,map.getOrDefault(num,0)+1);
+}
+for(int val:map.values()){
+  if(val>1){
+    count++;
+  }
+}
+System.out.print(count);
+    }
+}
